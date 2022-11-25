@@ -4,11 +4,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
-interface Data {
-  msg: string,
-  count: number,
-}
+import { Data } from '../types/views/Products.interface'
 
 export default defineComponent({
   name: 'products',
@@ -20,7 +16,7 @@ export default defineComponent({
   },
   methods: {
     getMsg(): string{
-      return this.sample
+      return this.msg
     }
   },
 });
