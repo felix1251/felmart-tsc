@@ -65,19 +65,23 @@
 import { defineComponent } from 'vue';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-import {Data} from '../types/layouts/Navbar.interface'
+import {Data, Navigation} from '../types/layouts/Navbar.interface'
 
 export default defineComponent({
   name: 'home',
   data(): Data {
     return {
-      navigation : [
-        { name: 'Dashboard', href: '#', current: true },
-        { name: 'Team', href: '#', current: false },
+      navigation : []
+    }
+  },
+  created() {
+    let nav: Navigation[] = [
+        { name: 'Dashboard', href: '#', current: false },
+        { name: 'Products', href: '#', current: false },
         { name: 'Projects', href: '#', current: false },
         { name: 'Calendar', href: '#', current: false },
       ]
-    }
+    this.navigation = nav
   },
 
   components: {

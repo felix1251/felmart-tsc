@@ -1,5 +1,5 @@
 <template>
-  <div>{{getMsg()}}</div>
+  <div>{{msg}}</div>
 </template>
 
 <script lang="ts">
@@ -10,14 +10,11 @@ export default defineComponent({
   name: 'products',
   data(): Data {
     return {
-      msg: "sample",
-      count: 9,
+      msg: "hello",
+      count: 0,
     }
   },
   methods: {
-    getMsg(): string{
-      return this.msg
-    }
   },
 });
 </script>

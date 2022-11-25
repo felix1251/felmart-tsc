@@ -16,6 +16,6 @@ export default defineComponent({
   components: {
   },
 });
-</script>
 
+</script>
 <style lang=""></style>
