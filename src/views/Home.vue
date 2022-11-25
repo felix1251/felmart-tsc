@@ -4,10 +4,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { Data } from '../types/views/Home.interface'
 
 export default defineComponent({
   name: 'home',
-  data(){
+  data(): Data {
     return{
       msg: "hello"
     }
