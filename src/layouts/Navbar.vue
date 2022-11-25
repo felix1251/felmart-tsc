@@ -74,10 +74,11 @@ export default defineComponent({
       navigation : []
     }
   },
+
   created() {
     let nav: Navigation[] = [
         { name: 'Dashboard', href: '#', current: false },
-        { name: 'Products', href: '#', current: false },
+        { name: 'Products', href: '#', current: true },
         { name: 'Projects', href: '#', current: false },
         { name: 'Calendar', href: '#', current: false },
       ]
