@@ -2,9 +2,19 @@
   <div>{{msg}}</div>
 </template>
 
-<script setup lang="ts">
-  import { ref } from 'vue'
-  const msg = ref('hello')
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'home',
+  data(){
+    return{
+      msg: "hello"
+    }
+  },
+  components: {
+  },
+});
 </script>
 
 <style lang=""></style>

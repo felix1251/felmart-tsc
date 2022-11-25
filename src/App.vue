@@ -1,15 +1,22 @@
 
 <template>
-  <Navbar/>
-  <router-view></router-view> 
+  <div>
+    <navbar/>
+    <router-view></router-view> 
+  </div>
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue';
+import Navbar from './layouts/Navbar.vue'
 
-<script setup lang="ts">
-  import HelloWorld from './components/HelloWorld.vue'
-  import Navbar from './layouts/Navbar.vue'
+export default defineComponent({
+  name: 'home',
+  components: {
+    Navbar
+  },
+});
 </script>
-
 
 <style scoped>
 .logo {

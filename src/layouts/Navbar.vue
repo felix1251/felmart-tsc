@@ -61,21 +61,34 @@
   </Disclosure>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
+import { defineComponent } from 'vue';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 
-interface Navigation {
-  name: string;
-  href: string;
-  current: boolean
-}
-
-const navigation : Navigation[] = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
-
+export default defineComponent({
+  name: 'home',
+  data() {
+    return {
+      navigation : [
+        { name: 'Dashboard', href: '#', current: true },
+        { name: 'Team', href: '#', current: false },
+        { name: 'Projects', href: '#', current: false },
+        { name: 'Calendar', href: '#', current: false },
+      ]
+    }
+  },
+  components: {
+    Disclosure,
+    DisclosureButton,
+    DisclosurePanel,
+    Menu,
+    MenuButton,
+    MenuItem,
+    MenuItems,
+    Bars3Icon,
+    BellIcon,
+    XMarkIcon,
+  },
+});
 </script>
